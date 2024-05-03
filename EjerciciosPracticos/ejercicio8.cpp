@@ -18,6 +18,7 @@ void multiVectores(){
     int arreglo1[3];
     int arreglo2[3];
     int resultado[3];
+    int suma = 0;
 
     cout << "Ingrese los 3 elementos del primer arreglo\n";
     for (int i = 0; i < 3; i++)
@@ -37,8 +38,10 @@ void multiVectores(){
         resultado[i] = arreglo1[i] * arreglo2[i];
     }
 
-    cout << "La suma de los dos arreglos es:" << endl;
     for (int i = 0; i < 3; ++i) {
-        cout << resultado[i] << " ";
+        resultado[i] = arreglo1[i] * arreglo2[i];
+        suma += resultado[i];
     }
+
+    printf("La sumatoria de ambos arreglos es %i", suma);
 }
