@@ -15,43 +15,68 @@ int main()
     return 0;
 }
 
-void multiMatrices(){
-    int matriz1[2][2];
-    int matriz2[2][2];
-    int matriz3[2][2];
+void multiMatrices()
+{
+    int matriz1[3][3];
+    int matriz2[3][3];
+    int matriz3[3][3];
 
     cout << "Ingrese los elementos de la primera matriz:" << endl;
-    for (int i = 0; i < 2; ++i) /*fila*/
+    for (int i = 0; i < 3; ++i) /*fila*/
     {
-        for (int j = 0; j < 2; ++j) /*columna*/
+        for (int j = 0; j < 3; ++j) /*columna*/
         {
             cout << "Ingrese el elemento (" << i + 1 << "," << j + 1 << "): ";
             cin >> matriz1[i][j];
         }
     }
+    cout << endl;
+
+    cout << "Matriz 1" << endl;
+    for (int i = 0; i < 3; ++i)
+    {
+        for (int j = 0; j < 3; ++j)
+        {
+            cout << matriz1[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
 
     cout << "Ingrese los elementos de la segunda matriz:" << endl;
-    for (int i = 0; i < 2; ++i) /*fila*/
+    for (int i = 0; i < 3; ++i) /*fila*/
     {
-        for (int j = 0; j < 2; ++j) /*columna*/
+        for (int j = 0; j < 3; ++j) /*columna*/
         {
             cout << "Ingrese el elemento (" << i + 1 << "," << j + 1 << "): ";
             cin >> matriz2[i][j];
         }
     }
+    cout << endl;
 
-    for (int i = 0; i < 2; ++i)
+    cout << "Matriz 2" << endl;
+    for (int i = 0; i < 3; ++i)
     {
-        for (int j = 0; j < 2; ++j)
+        for (int j = 0; j < 3; ++j)
+        {
+            cout << matriz2[i][j] << " ";
+        }
+        cout << endl;
+    }
+    cout << endl;
+    
+    for (int i = 0; i < 3; ++i)
+    {
+        for (int j = 0; j < 3; ++j)
         {
             matriz3[i][j] = matriz1[i][j] * matriz2[i][j];
         }
     }
 
     cout << "La matriz resultante es:" << endl;
-    for (int i = 0; i < 2; ++i)
+    for (int i = 0; i < 3; ++i)
     {
-        for (int j = 0; j < 2; ++j)
+        for (int j = 0; j < 3; ++j)
         {
             cout << matriz3[i][j] << " ";
         }
